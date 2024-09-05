@@ -10,7 +10,7 @@ async def create_file():
     return FileProcessor().create_file()
 
 @router.post("/upload_file/")
-async def upload_file(file: UploadFile = File(...)):
+async def upload_file(file: UploadFile = file(...)):
     return await FileProcessor().upload_file(file)
 
 @router.post("/file/add_data")
